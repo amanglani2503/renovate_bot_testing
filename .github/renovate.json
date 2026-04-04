@@ -6,7 +6,7 @@
   ],
 
   "timezone": "Asia/Kolkata",
-  "schedule": ["after 11:25pm and before 11:30pm"],
+  "schedule": ["after 11:25pm and before 11:30pm everyday"],
 
   "reviewers": ["amitpawar7475", "shubhampanse938@gmail.com"],
   "assignees": ["ambermanglani8871"],
@@ -14,7 +14,7 @@
   "labels": ["dependencies"],
 
   "prConcurrentLimit": 5,
-  "prHourlyLimit": 2,
+  "prHourlyLimit": 50,
 
   "dependencyDashboard": true,
 
