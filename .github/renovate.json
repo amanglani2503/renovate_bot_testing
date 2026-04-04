@@ -5,8 +5,11 @@
     ":assignAndReview"
   ],
 
-  "reviewers": ["amitpawar7475@gmail.com"],
-  "assignees": ["ambermanglani8871@gmail.com"],
+  "timezone": "Asia/Kolkata",
+  "schedule": ["after 10:50pm and before 11:00pm"],
+
+  "reviewers": ["amitpawar7475"],
+  "assignees": ["ambermanglani8871"],
 
   "labels": ["dependencies"],
 
