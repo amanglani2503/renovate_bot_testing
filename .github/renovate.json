@@ -1,0 +1,29 @@
+{
+  "extends": [
+    "config:base",
+    ":enableVulnerabilityAlerts",
+    ":assignAndReview"
+  ],
+
+  "reviewers": ["amitpawar7475@gmail.com"],
+  "assignees": ["ambermanglani8871@gmail.com"],
+
+  "labels": ["dependencies"],
+
+  "prConcurrentLimit": 5,
+  "prHourlyLimit": 2,
+
+  "dependencyDashboard": true,
+
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "all minor and patch updates",
+      "requiredStatusChecks": ["build"]
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    }
+  ]
+}
