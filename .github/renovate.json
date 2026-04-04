@@ -1,31 +1,39 @@
 {
   "extends": [
     "config:base",
-    ":enableVulnerabilityAlerts",
-    ":assignAndReview"
+    ":enableVulnerabilityAlerts"
   ],
 
   "timezone": "Asia/Kolkata",
-  "schedule": ["after 11:45pm and before 11:53pm everyday"],
+  "schedule": ["after 12:00am and before 1:00am every day"],
 
-  "reviewers": ["amitpawar7475", "shubhampanse938@gmail.com"],
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
+
+  "rangeStrategy": "pin",
+
   "assignees": ["ambermanglani8871"],
+  "reviewers": ["amitpawar7475", "shubhampanse938"],
 
   "labels": ["dependencies"],
-
-  "prConcurrentLimit": 5,
-  "prHourlyLimit": 50,
 
   "dependencyDashboard": true,
 
   "packageRules": [
     {
-      "matchUpdateTypes": ["minor", "patch"],
-      "groupName": "all minor and patch updates",
-      "requiredStatusChecks": ["build"]
+      "matchManagers": ["maven"],
+      "matchFiles": ["pom.xml"],
+      "requiredStatusChecks": ["build"],
+      "automerge": false
     },
     {
       "matchUpdateTypes": ["major"],
+      "automerge": false
+    },
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "all minor and patch updates",
+      "requiredStatusChecks": ["build"],
       "automerge": false
     }
   ]
